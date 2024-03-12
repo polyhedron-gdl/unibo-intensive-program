@@ -15192,34 +15192,6 @@ div.jp-OutputPrompt {
 </div>
 </div>
 </div></section><section >
-<div id="cell-id=7ea7fe4d" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="What-you-will-Learn-in-this-Chapter">What you will Learn in this Chapter<a class="anchor-link" href="#What-you-will-Learn-in-this-Chapter">&#182;</a></h3><p>Upon completing this lesson, students will be able to:</p>
-<ol>
-<li><strong>Understand Gaussian Mixture Models (GMMs):</strong><ul>
-<li>Describe what Gaussian Mixture Models are and how they differ from other clustering algorithms like K-Means.</li>
-<li>Explain the concept of mixture modeling and how GMMs utilize probability distributions to perform soft clustering.</li>
-</ul>
-</li>
-<li><strong>Apply GMMs to Synthetic Data:</strong><ul>
-<li>Generate synthetic datasets with specified characteristics using scikit-learn's <code>make_blobs</code> or similar functions.</li>
-<li>Understand the importance of parameters such as the number of components and covariance type in GMMs and how they affect the model's behavior and performance.</li>
-</ul>
-</li>
-<li><strong>Fit a GMM Using scikit-learn:</strong><ul>
-<li>Use the <code>GaussianMixture</code> class from scikit-learn's <code>mixture</code> module to fit a GMM to data.</li>
-<li>Interpret the key attributes of a fitted GMM, including the means, covariances, and weights of the components.</li>
-</ul>
-</li>
-</ol>
-
-</div>
-</div>
-</div>
-</div></section><section >
 <div id="cell-id=aec8c22b" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -15232,7 +15204,7 @@ div.jp-OutputPrompt {
 </li>
 <li><p>GMMs are used for clustering similar to k-means but provide more flexibility due to the incorporation of distributional information.</p>
 </li>
-<li><p>GMMs can accommodate clusters that have different sizes and correlations as well as different shapes, unlike k-means which assumes all clusters are spherical.</p>
+<li><p><span style="background-color: #FFFF00">GMMs can accommodate clusters that have different sizes and correlations as well as different shapes, unlike k-means which assumes all clusters are spherical</span>.</p>
 </li>
 </ul>
 
@@ -15308,7 +15280,7 @@ ellipsoidal shape, size, density and orientation</p>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p><strong>Soft Clustering</strong></p>
 <ul>
-<li><p>Unlike k-means which assigns each data point to exactly one cluster, GMMs allow for soft clustering.</p>
+<li><p>Unlike k-means which assigns each data point to exactly one cluster, GMMs allow for <strong>soft clustering</strong>.</p>
 </li>
 <li><p>This means each data point is assigned a probability (or weight) reflecting how likely it is to belong to each cluster.</p>
 </li>
@@ -15325,22 +15297,12 @@ ellipsoidal shape, size, density and orientation</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="The-Algorithm">The Algorithm<a class="anchor-link" href="#The-Algorithm">&#182;</a></h3><ul>
-<li><p>As we have said, The Gaussian Mixture Model (GMM) enhances the K-Means approach by utilizing Gaussian distributions to characterize clusters.</p>
-</li>
-<li><p>Distinct from K-Means, GMM captures not just the cluster centers but also their covariances, facilitating the depiction of the clusters' ellipsoidal contours.</p>
-</li>
-<li><p>The fitting of GMM employs the Expectation Maximization (EM) algorithm, aimed at optimizing the likelihood of the given data.</p>
-</li>
-<li><p>Unlike the hard clustering of K-Means, EM allocates data points to clusters based on soft probabilities, offering a more nuanced assignment process.</p>
-</li>
-</ul>
-
+<h3 id="The-Algorithm">The Algorithm<a class="anchor-link" href="#The-Algorithm">&#182;</a></h3>
 </div>
 </div>
 </div>
 </div></section><section >
-<div id="cell-id=1272a1d3" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div id="cell-id=2d6858dd" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -15357,7 +15319,7 @@ ellipsoidal shape, size, density and orientation</p>
 </div>
 </div>
 </div>
-</div></section><section ><div id="cell-id=2c296511" class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput ">
+</div></section><section ><div id="cell-id=d6184b8b" class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput ">
 
 <div class="jp-Cell-outputWrapper">
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
@@ -15381,7 +15343,7 @@ class="
 </div>
 
 </div></section><section >
-<div id="cell-id=21a4955b" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div id="cell-id=1a15c450" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -15419,13 +15381,21 @@ class="
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p><strong>Algorithm</strong></p>
-<p><strong>1</strong> Initialize the mean $(\mu_𝑘)$, covariance matrix $(\sigma_𝑘)$, and mixing coefficients $(\pi_𝑘)$ with random or predefined values. Usually for the weights we use an equal probability a priori that means that, in the beginning, weights will be equal for all clusters. Assume that we fit a GMM with three components. In this case weight parameter might be set to 1/3 for each component, resulting in a probability distribution of (1/3, 1/3, 1/3).</p>
-<p><strong>2</strong> For each data point $x_i$, calculate the probability that the data point belongs to cluster $k$ (component assignments $(𝐶_𝑘(x_i))$) for all clusters.</p>
-<p><strong>3</strong> Estimate all the parameters using the current component assignments $(𝐶_𝑘)$.</p>
-<p><strong>4</strong> Compute the log-likelihood function.</p>
-<p><strong>5</strong> Set a convergence criterion.</p>
-<p><strong>6</strong> If the log-likelihood value converges to a specific threshold or if all the parameters converge to certain values, stop the algorithm. Otherwise, go back to Step 2.</p>
-<p>It’s important to note that this algorithm guarantees convergence to a local optimum but doesn’t ensure that this local optimum is also the global one. Consequently, if the algorithm starts from different initializations, it may lead to different configurations. Let's how it works in practise using the implementation of <code>sklearn</code> library...</p>
+<ol>
+<li><p>Initialize the mean $(\mu_𝑘)$, covariance matrix $(\sigma_𝑘)$, and mixing coefficients $(\pi_𝑘)$ with random or predefined values. Usually for the weights we use an equal probability a priori that means that, in the beginning, weights will be equal for all clusters. Assume that we fit a GMM with three components. In this case weight parameter might be set to 1/3 for each component, resulting in a probability distribution of (1/3, 1/3, 1/3).</p>
+</li>
+<li><p>For each data point $x_i$, calculate the probability that the data point belongs to cluster $k$ (component assignments $(𝐶_𝑘(x_i))$) for all clusters.</p>
+</li>
+<li><p>Estimate all the parameters using the current component assignments $(𝐶_𝑘)$.</p>
+</li>
+<li><p>Compute the log-likelihood function.</p>
+</li>
+<li><p>Set a convergence criterion.</p>
+</li>
+<li><p>If the log-likelihood value converges to a specific threshold or if all the parameters converge to certain values, stop the algorithm. Otherwise, go back to Step 2.</p>
+</li>
+</ol>
+<p>It’s important to note that <strong>this algorithm guarantees convergence to a local optimum but doesn’t ensure that this local optimum is also the global one</strong>. Consequently, if the algorithm starts from different initializations, it may lead to different configurations. Let's how it works in practise using the implementation of <code>sklearn</code> library...</p>
 
 </div>
 </div>
@@ -15490,14 +15460,14 @@ class="
 <ul>
 <li><strong>Initialization Sensitivity</strong>: The results of GMMs can be sensitive to the initialization of parameters. Multiple runs with different initializations may be necessary to find a good solution.</li>
 <li><strong>Computational Complexity</strong>: The EM algorithm can be computationally intensive, especially as the number of components and dimensions of the data increase.</li>
-<li><strong>Model Selection</strong>: Determining the optimal number of Gaussian components in the mixture is a non-trivial problem and often requires criteria like <a href="https://en.wikipedia.org/wiki/Bayesian_information_criterion">Bayesian Information Criterion (BIC)</a> or <a href="https://en.wikipedia.org/wiki/Akaike_information_criterion">Akaike Information Criterion (AIC)</a> for model selection.</li>
+<li><strong>Model Selection</strong>: <span style="background-color: #FFFF00">Determining the optimal number of Gaussian components in the mixture is a non-trivial problem and often requires criteria like <a href="https://en.wikipedia.org/wiki/Bayesian_information_criterion">Bayesian Information Criterion (BIC)</a> or <a href="https://en.wikipedia.org/wiki/Akaike_information_criterion">Akaike Information Criterion (AIC)</a> for model selection</span>.</li>
 </ul>
 
 </div>
 </div>
 </div>
 </div></section><section >
-<div id="cell-id=3145136c" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div id="cell-id=5526f8a0" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -15512,9 +15482,9 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Selecting-the-Number-of-Clusters">Selecting the Number of Clusters<a class="anchor-link" href="#Selecting-the-Number-of-Clusters">&#182;</a></h3><p>Determining the number of clusters in a Gaussian Mixture Model (GMM) for clustering involves finding the model that best balances fit and complexity. GMMs assume that the data is generated from a mixture of several Gaussian distributions, with each distribution representing a cluster. The challenge is to select the right number of Gaussian components (clusters) that best represent the underlying data without overfitting. Several methods are commonly used to make this decision:</p>
+<h3 id="Selecting-the-Number-of-Clusters">Selecting the Number of Clusters<a class="anchor-link" href="#Selecting-the-Number-of-Clusters">&#182;</a></h3><p>Determining the number of clusters in a Gaussian Mixture Model (GMM) for clustering involves finding the model that best balances fit and complexity. GMMs assume that the data is generated from a mixture of several Gaussian distributions, with each distribution representing a cluster. <span style="background-color: #FFFF00">The challenge is to select the right number of Gaussian components (clusters) that best represent the underlying data without overfitting</span>. Several methods are commonly used to make this decision:</p>
 <p><strong>Akaike Information Criterion (AIC)</strong></p>
-<p>The AIC is a metric that quantifies the goodness of fit of a model and the complexity of the model. It penalizes the likelihood of the model by the number of parameters used. The goal is to minimize the AIC value. When comparing multiple GMMs with different numbers of clusters, the model with the lowest AIC value is generally preferred.</p>
+<p>The AIC is a metric that quantifies the goodness of fit of a model and the complexity of the model. <span style="background-color: #FFFF00">It penalizes the likelihood of the model by the number of parameters used</span>. The goal is to minimize the AIC value. When comparing multiple GMMs with different numbers of clusters, <strong>the model with the lowest AIC value is generally preferred</strong>.</p>
 <p><strong>Bayesian Information Criterion (BIC)</strong></p>
 <p>Similar to AIC, the BIC also includes a penalty term for the number of parameters in the model. However, BIC tends to impose a heavier penalty than AIC, leading to the selection of simpler models with fewer clusters. As with AIC, the model with the lowest BIC value is preferred.</p>
 
@@ -15584,7 +15554,7 @@ class="
 </div>
 </div>
 </div></section><section >
-<div id="cell-id=e075f3bd" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div id="cell-id=a0fa1871" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
